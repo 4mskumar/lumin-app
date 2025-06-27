@@ -50,7 +50,7 @@ const ChatPageNav = () => {
         setIsLoading(false);
       }, 2000);
       const response = await axios.post(
-        "http://localhost:5000/api/chat/clear",
+        "https://lumin-app.onrender.com/api/chat/clear",
         { userId: user.sub }
       );
       if (response.status === 200) {

@@ -63,7 +63,7 @@ const ChatHero = () => {
     try {
       const token = await getAccessTokenSilently();
       const res = await axios.post(
-        "http://localhost:5000/api/chat",
+        "https://lumin-app.onrender.com/api/chat",
         { email: user.email, userId: user.sub, message: userMessage.message },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -85,7 +85,7 @@ const ChatHero = () => {
       try {
         const token = await getAccessTokenSilently();
         const res = await axios.post(
-          `http://localhost:5000/api/chat/history`,
+          `https://lumin-app.onrender.com/api/chat/history`,
           { userId: user.sub },
           { headers: { Authorization: `Bearer ${token}` } }
         );
@@ -122,7 +122,7 @@ const ChatHero = () => {
     try {
       const token = await getAccessTokenSilently();
       const res = await axios.post(
-        "http://localhost:5000/api/chat",
+        "https://lumin-app.onrender.com/api/chat",
         { email: user.email, userId: user.sub, message: input },
         { headers: { Authorization: `Bearer ${token}` } }
       );
